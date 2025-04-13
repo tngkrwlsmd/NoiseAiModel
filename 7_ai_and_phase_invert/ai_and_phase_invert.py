@@ -26,6 +26,13 @@ class_names = ['high_freq', 'low_freq', 'mid_freq']  # 분류 클래스
 # 모델 불러오기
 model = load_model("noise_classifier_cnn.keras")
 
+# 소음 채집 코드
+#def record_audio(duration=DURATION):
+#    print("🎤 소리 녹음 중...")
+#    audio = sd.rec(int(duration * SAMPLE_RATE), samplerate=SAMPLE_RATE, channels=1)
+#    sd.wait()
+#    return np.squeeze(audio)
+
 # 랜덤 주파수 오디오 생성 (녹음 대신)
 def generate_random_audio():
     freq_ranges = {
